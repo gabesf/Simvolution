@@ -95,14 +95,15 @@ public class LifeFormExec : MonoBehaviour
         geneticCodeOperator = new GeneticCodeOperator();
         geneticBuildingInstructions = new GeneticBuildingInstructions();
 
-
+        #region neural network tests
+        /*
         neural = new NetworkModel();
         neural.Layers.Add(new NeuralLayer(4, 1, "INPUT"));
         neural.Layers.Add(new NeuralLayer(2, 1, "HIDDEN"));
         neural.Layers.Add(new NeuralLayer(4, 2, "OUTPUT"));
 
         neural.Build();
-        Debug.Log("----Before Training------------");
+        //Debug.Log("----Before Training------------");
         neural.Print();
 
         NeuralData X = new NeuralData(4);
@@ -120,16 +121,18 @@ public class LifeFormExec : MonoBehaviour
         neural.Train(X, Y, iterations: 10, learningRate: 0.1);
         //List<double> outputs = neural.Process(X);
 
+        */
+        #endregion
 
-        Debug.Log("----After Training------------");
-        
+        //Debug.Log("----After Training------------");
+
         //for(int i = 0; i < outputs.Count; i++)
         //{
         //    Debug.Log($"Output{i} = {outputs[i]}");
         //}
-        
+
         //neural.Print();
-        Debug.Break();
+
         //X.Add(2.0f);
         //X.Add(3.0f);
 

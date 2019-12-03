@@ -18,7 +18,7 @@ public class GeneticCodeOperator
     {
 
         bool validForm = true;
-        Debug.Log("Processing GC " + geneticCode.Count);
+        //Debug.Log("Processing GC " + geneticCode.Count);
         for(int j = 0; j < geneticCode.Count; j++)
         {
             //Debug.Log($"[{j}] = {geneticCode[j]}");

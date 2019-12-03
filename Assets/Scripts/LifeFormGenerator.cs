@@ -14,7 +14,7 @@ public class LifeFormGenerator : MonoBehaviour
     {
         lifeContainer = GameObject.Find("Life");
         life = new List<GameObject>();
-        for(int i = 0; i < 1; i++)
+        for(int i = 0; i < 100; i++)
         {
             GameObject lifeForm = new GameObject("lifeForm");
             lifeForm.AddComponent<LifeFormExec>();
@@ -29,7 +29,7 @@ public class LifeFormGenerator : MonoBehaviour
 
 
             lifeForm.transform.position = new Vector3(Random.Range(-1f, 1f) * 50, Random.Range(0, 1f) * 50, Random.Range(-1f, 1f) * 50);
-            lifeForm.transform.position = new Vector3(0, 3, 0);
+            //lifeForm.transform.position = new Vector3(0, 3, 0);
 
             //lifeForm.transform.parent = lifeContainer.transform;
         }

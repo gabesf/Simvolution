@@ -43,9 +43,9 @@ namespace Neural
 
         public void Fire()
         {
-            Debug.Log("Inside a Neuron Value = " + OutputPulse.Value);
+            //Debug.Log("Inside a Neuron Value = " + OutputPulse.Value);
             OutputPulse.Value = Sum();
-            Debug.Log("Still Inside, after Sum = " + OutputPulse.Value);
+            //Debug.Log("Still Inside, after Sum = " + OutputPulse.Value);
             OutputPulse.Value = Activation(OutputPulse.Value);
         }
 
@@ -60,11 +60,11 @@ namespace Neural
         private double Sum()
         {
             double computeValue = 0.0f;
-            Debug.Log($"This Neuron receives {Dendrites.Count} dendtrites");
+            //Debug.Log($"This Neuron receives {Dendrites.Count} dendtrites");
             int i = 0;
             foreach (var d in Dendrites)
             {
-                Debug.Log($"Dendrite {i} value = {d.InputPulse.Value}");
+                //Debug.Log($"Dendrite {i} value = {d.InputPulse.Value}");
                 computeValue += d.InputPulse.Value * d.SynapticWeight;
                 i++;
             }
@@ -115,7 +115,7 @@ namespace Neural
             int i = 0;
             foreach (var neuron in Neurons)
             {
-                Debug.Log("Processing Neuron #" + i);
+                //Debug.Log("Processing Neuron #" + i);
                 neuron.Fire();
                 i++;
             }
@@ -123,7 +123,7 @@ namespace Neural
 
         public void Log()
         {
-            Debug.Log($"{Name}, Weight: {Weight}");
+            //Debug.Log($"{Name}, Weight: {Weight}");
         }
     }
 
@@ -232,10 +232,10 @@ namespace Neural
                     outputs.Add(Layers.Last().Neurons.First().OutputPulse.Value);
                 }
 
-                Debug.Log("Inside Train:");
+                //Debug.Log("Inside Train:");
                 for(int i = 0; i < outputs.Count; i++)
                 {
-                    Debug.Log(outputs[i]);
+                    //Debug.Log(outputs[i]);
                 }
                 //Check the accuracy score against Y with the actual output
                 double accuracySum = 0;
@@ -251,17 +251,17 @@ namespace Neural
 
                 //Optimize the synaptic weights
                 OptimizeWeights(accuracySum / y_counter);
-                Debug.Log($"Epoch: {epoch}, Accuracy: {(accuracySum / y_counter) * 100} %");
+                //Debug.Log($"Epoch: {epoch}, Accuracy: {(accuracySum / y_counter) * 100} %");
                 epoch++;
             }
         }
 
         public void Print()
         {
-            Debug.Log("Name   Neurons   Weight");
+            //Debug.Log("Name   Neurons   Weight");
             for(int i = 0; i < Layers.Count; i++)
             {
-                Debug.Log(Layers[i].Name + " " + Layers[i].Neurons.Count + " " + Layers[i].Weight);
+                //Debug.Log(Layers[i].Name + " " + Layers[i].Neurons.Count + " " + Layers[i].Weight);
             }
             /*DataTable dt = new DataTable(); 
             dt.Columns.Add("Name");
@@ -296,7 +296,7 @@ namespace Neural
                     continue;
                 }
 
-                Debug.Log("Processing Layer");
+                //Debug.Log("Processing Layer");
                 layer.Forward();
             }
         }
