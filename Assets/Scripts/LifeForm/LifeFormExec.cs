@@ -12,6 +12,7 @@ public class LifeFormExec : MonoBehaviour
     bool isRemoteControlled = false;
     List<GameObject> parts;
     List<float> controls = new List<float>();
+    public bool addControlPanel = false;
 
     #endregion
 
@@ -418,7 +419,7 @@ public class LifeFormExec : MonoBehaviour
         if (energyLevel > 750)
         {
             Reproduce();
-            //Debug.Log("reproduction time!");
+            Debug.Log("reproduction time!");
         }
 
     }
@@ -474,7 +475,16 @@ public class LifeFormExec : MonoBehaviour
     void Update()
     {
 
+        if(addControlPanel)
+        {
+            addControlPanel = false;
+            if(!gameObject.GetComponent<ControlPanel>())
+            {
+                gameObject.AddComponent<ControlPanel>();
 
+            }
+
+        }
 
         if(!firstFrame)
         {

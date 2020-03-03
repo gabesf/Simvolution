@@ -33,9 +33,19 @@ public class GeneticCode
         geneticCodeList = new List<byte>();
 
 
-        //AddFirstSphereCode(geneticCodeList);
         AddFirstSphereCode(geneticCodeList);
+
+        //AddFirstSphereCode(geneticCodeList);
+        //AddFirstSphereCode(geneticCodeList);
+        //AddFirstSphereCode(geneticCodeList);
+
+
         //AddSphereToCoordinates(geneticCodeList, new Vector3(90, 0, 0));
+        //AddSphereToCoordinates(geneticCodeList, new Vector3(120, 00, 0));
+        //AddPlaneToCoordinates(geneticCodeList, new Vector3(0, 0, 0));
+        //AddSphereToCoordinates(geneticCodeList, new Vector3(180, 00, 0));
+        //AddPlaneToCoordinates(geneticCodeList, new Vector3(0, 0, 0));
+
         //AddPlaneToCoordinates(geneticCodeList, new Vector3(0, 0, 0));
         //AddSphereToCoordinates(geneticCodeList, new Vector3(-90f, 0, 0));
         //AddPlaneToCoordinates(geneticCodeList, new Vector3(0, 0, 0));

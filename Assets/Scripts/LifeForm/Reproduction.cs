@@ -10,7 +10,7 @@ using UnityEngine;
     public static void Reproduce(GameObject oLifeForm)
     {
         //Debug.Break();
-        //Debug.Log("will create another one");
+        
         counter++;
         GameObject lifeForm = new GameObject("newLife" + counter);
 
